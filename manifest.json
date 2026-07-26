@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Arabic/English Keyboard Fixer",
+  "version": "1.0",
+  "description": "Quickly convert mistyped text between Arabic and English keyboard layouts.",
+  "permissions": ["contextMenus", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
